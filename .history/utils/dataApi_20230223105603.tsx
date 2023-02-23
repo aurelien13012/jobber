@@ -1,11 +1,9 @@
-// type Result = {
-//     data?: object,
-//     error?: string
-// }
+type Result = {
+    data?: object,
+    error?: string
+}
 
-import { Result } from "./types";
-
-export const get = async (url: string): Promise<object | Result> => {
+export const get = async (url: string): Promise<Result> => {
     try {
         const res = await fetch(url);
         const data = await res.json();
@@ -15,7 +13,7 @@ export const get = async (url: string): Promise<object | Result> => {
     }
 }
 
-export const post = async (url: string, post: object): Promise<object | Result> => {
+export const post = async (url: string, post: object): object | Promise<Result> => {
     try {
         const res = await fetch(url, post);
         const data = await res.json();

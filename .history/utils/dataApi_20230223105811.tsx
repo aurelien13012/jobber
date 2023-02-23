@@ -1,9 +1,7 @@
-// type Result = {
-//     data?: object,
-//     error?: string
-// }
-
-import { Result } from "./types";
+type Result = {
+    data?: object,
+    error?: string
+}
 
 export const get = async (url: string): Promise<object | Result> => {
     try {

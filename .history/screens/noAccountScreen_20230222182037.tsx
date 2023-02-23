@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { recruiter } from '../utils/variables';
 import StandardButton from '../components/standardButton';
-import { handleFirstConnection } from '../utils/connection/firstConnection';
+import { handleFirstConnection } from '../utils/connection/handleConnection';
 
 
 const NoAccountScreen = () => {
