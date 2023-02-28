@@ -1,0 +1,12 @@
+import { Text } from "react-native";
+import { View } from "react-native";
+
+const NoResults = () => {
+return(
+    <View>
+        <Text>Plus de résultats revenez plus tard :)</Text>
+    </View>
+)
+}
+
+export default NoResults;
