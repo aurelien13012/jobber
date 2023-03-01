@@ -64,10 +64,6 @@ const MainScreen = () => {
                     name={fakeDataCompanies[index].companyName}
                     fonction={fakeDataCompanies[index].poste}
                     desc={fakeDataCompanies[index].description}
-                    mission={fakeDataCompanies[index].mission}
-                    profil={fakeDataCompanies[index].profil}
-                    salary={fakeDataCompanies[index].salary}
-                    contract={fakeDataCompanies[index].contract}
                 />
                 // </View>
                 // {/* <StandardButton title={"Passer"} onPress={skip} /> */}

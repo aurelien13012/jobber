@@ -59,18 +59,14 @@ const MainScreen = () => {
     // TODO On doit faire appel a un useState qu'on doit faire varier quand on appuiera sur un bouton dans un premier temps
     if (isTalent) {
         return (
-            // <View style={styles.test}>
+            <View style={styles.test}>
                 <RecruiterTemplate
                     name={fakeDataCompanies[index].companyName}
                     fonction={fakeDataCompanies[index].poste}
                     desc={fakeDataCompanies[index].description}
-                    mission={fakeDataCompanies[index].mission}
-                    profil={fakeDataCompanies[index].profil}
-                    salary={fakeDataCompanies[index].salary}
-                    contract={fakeDataCompanies[index].contract}
                 />
-                // </View>
-                // {/* <StandardButton title={"Passer"} onPress={skip} /> */}
+                {/* <StandardButton title={"Passer"} onPress={skip} /> */}
+            </View>
         )
     }
 

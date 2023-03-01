@@ -36,11 +36,11 @@ const RecruiterTemplate = ({ name, fonction, desc, salary, contract, mission, pr
                     <Text style={styles.desc}>{desc}</Text>
                 </View>
                 <View>
-                    <Text style={styles.descTitle}>Mission</Text>
+                    <Text>Mission</Text>
                     <Text style={styles.desc}>{mission}</Text>
                 </View>
                 <View>
-                    <Text style={styles.descTitle}>Profil</Text>
+                    <Text>Profil</Text>
                     <Text style={styles.desc}>{profil}</Text>
                 </View>
             </View>
@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
-        marginLeft: 10,
-        marginRight: 10,
+        marginLeft: 20,
+        marginRight: 20,
         marginBottom: 70,
         marginTop: 70,
         borderWidth: 1,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     descriptionSection: {
-        flex: 7
+        flex: 6
     },
     desc: {
         textAlign: "justify"
@@ -101,8 +101,7 @@ const styles = StyleSheet.create({
     },
     descTitle : {
         fontWeight : "bold",
-        paddingBottom : 5,
-        paddingTop : 5
+        paddingBottom : 5
     }
 
 });

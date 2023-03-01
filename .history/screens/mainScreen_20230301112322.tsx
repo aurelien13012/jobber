@@ -7,14 +7,11 @@ import jwt_decode from "jwt-decode";
 import RecruiterTemplate from "../components/recruiterTemplate";
 import TalentTemplate from "../components/talentTemplate";
 import { fakeDataCompanies } from "../utils/fakeDataCompanies";
-import StandardButton from "../components/standardButton";
-import { View, StyleSheet } from "react-native";
-import { DecodedToken } from "../utils/types";
 
-// type DecodedToken = {
-//     name?: string,
-//     company?: string
-// };
+type DecodedToken = {
+    name?: string,
+    company?: string
+};
 
 const MainScreen = () => {
 
@@ -46,31 +43,11 @@ const MainScreen = () => {
     }, [])
 
 
-    const skip = (): void => {
-        console.log("index", index)
-        console.log("fakedatalenght", fakeDataCompanies.length)
-        if (fakeDataCompanies.length - 1 === index) {
-            setIndex(0);
-            return
-        }
-        setIndex(prevIndex => prevIndex + 1)
-    }
     //TODO On reprend ici regarder react-native-swipeable
     // TODO On doit faire appel a un useState qu'on doit faire varier quand on appuiera sur un bouton dans un premier temps
     if (isTalent) {
         return (
-            // <View style={styles.test}>
-                <RecruiterTemplate
-                    name={fakeDataCompanies[index].companyName}
-                    fonction={fakeDataCompanies[index].poste}
-                    desc={fakeDataCompanies[index].description}
-                    mission={fakeDataCompanies[index].mission}
-                    profil={fakeDataCompanies[index].profil}
-                    salary={fakeDataCompanies[index].salary}
-                    contract={fakeDataCompanies[index].contract}
-                />
-                // </View>
-                // {/* <StandardButton title={"Passer"} onPress={skip} /> */}
+            <RecruiterTemplate/>
         )
     }
 
@@ -78,11 +55,5 @@ const MainScreen = () => {
         <TalentTemplate />
     )
 };
-
-const styles = StyleSheet.create({
-    test: {
-        flex: 1
-    }
-})
 
 export default MainScreen;

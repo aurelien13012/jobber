@@ -49,7 +49,7 @@ const MainScreen = () => {
     const skip = (): void => {
         console.log("index", index)
         console.log("fakedatalenght", fakeDataCompanies.length)
-        if (fakeDataCompanies.length - 1 === index) {
+        if(fakeDataCompanies.length - 1 === index) {
             setIndex(0);
             return
         }
@@ -59,18 +59,14 @@ const MainScreen = () => {
     // TODO On doit faire appel a un useState qu'on doit faire varier quand on appuiera sur un bouton dans un premier temps
     if (isTalent) {
         return (
-            // <View style={styles.test}>
-                <RecruiterTemplate
-                    name={fakeDataCompanies[index].companyName}
-                    fonction={fakeDataCompanies[index].poste}
-                    desc={fakeDataCompanies[index].description}
-                    mission={fakeDataCompanies[index].mission}
-                    profil={fakeDataCompanies[index].profil}
-                    salary={fakeDataCompanies[index].salary}
-                    contract={fakeDataCompanies[index].contract}
+            <View style={styles.test}>
+                <RecruiterTemplate 
+                name={fakeDataCompanies[index].companyName} 
+                fonction={fakeDataCompanies[index].poste} 
+                desc={fakeDataCompanies[index].description} 
                 />
-                // </View>
-                // {/* <StandardButton title={"Passer"} onPress={skip} /> */}
+                <StandardButton title={"Passer"} onPress={skip}/>
+            </View>
         )
     }
 
@@ -80,8 +76,8 @@ const MainScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    test: {
-        flex: 1
+    test : {
+        flex : 1
     }
 })
 

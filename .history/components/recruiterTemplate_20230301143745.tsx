@@ -6,16 +6,14 @@ type recruiterProps = {
     fonction: string,
     salary: string,
     desc: string,
-    contract: string,
-    mission: string,
-    profil: string
+    contract : string
 }
 
-const RecruiterTemplate = ({ name, fonction, desc, salary, contract, mission, profil }: recruiterProps) => {
+const RecruiterTemplate = ({ name, fonction, desc, salary, contract }: recruiterProps) => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.mainInfo}>
+            <View>
                 <Text style={styles.fonction}>{fonction}</Text>
                 <Text style={styles.company}>Entreprise : {name}</Text>
             </View>
@@ -29,20 +27,9 @@ const RecruiterTemplate = ({ name, fonction, desc, salary, contract, mission, pr
                     <Text style={styles.padSalAndCt}>{contract}</Text>
                 </View>
             </View>
-            <View style={styles.descriptionSection}>
+            <View>
                 <Text style={styles.postDesc}>Descriptif du poste</Text>
-                <View>
-                    <Text style={styles.descTitle}>Société</Text>
-                    <Text style={styles.desc}>{desc}</Text>
-                </View>
-                <View>
-                    <Text style={styles.descTitle}>Mission</Text>
-                    <Text style={styles.desc}>{mission}</Text>
-                </View>
-                <View>
-                    <Text style={styles.descTitle}>Profil</Text>
-                    <Text style={styles.desc}>{profil}</Text>
-                </View>
+                <Text style={styles.desc}>{desc}</Text>
             </View>
         </View>
     )
@@ -52,8 +39,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
-        marginLeft: 10,
-        marginRight: 10,
+        marginLeft: 20,
+        marginRight: 20,
         marginBottom: 70,
         marginTop: 70,
         borderWidth: 1,
@@ -63,17 +50,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         padding: 10
     },
-    mainInfo: {
-        flex: 1
-    },
-    descriptionSection: {
-        flex: 7
-    },
     desc: {
         textAlign: "justify"
-    },
-    salAndCt: {
-        flex: 1,
     },
     fonction: {
         fontWeight: "bold",
@@ -86,23 +64,25 @@ const styles = StyleSheet.create({
     postDesc: {
         fontSize: 20,
         fontWeight: "bold",
-        paddingBottom : 5
+        paddingTop: 15,
+        paddingBottom: 10
     },
-    salary: {
-        flexDirection: "row",
-        paddingBottom: 2,
+    salAndCt : {
+        flex : 1,
+        paddingTop : 15,
+        alignContent : "center",
+        justifyContent : "center",
+        alignItems : "center"
     },
-    contract: {
-        flexDirection: "row",
+    salary : {
+        flexDirection : "row",
+        paddingBottom : 2
     },
-    padSalAndCt: {
-        paddingLeft: 10,
-        alignSelf: "center"
+    contract : {
+        flexDirection : "row"
     },
-    descTitle : {
-        fontWeight : "bold",
-        paddingBottom : 5,
-        paddingTop : 5
+    padSalAndCt : {
+        paddingLeft : 10
     }
 
 });

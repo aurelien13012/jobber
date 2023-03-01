@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
-        marginLeft: 10,
-        marginRight: 10,
+        marginLeft: 20,
+        marginRight: 20,
         marginBottom: 70,
         marginTop: 70,
         borderWidth: 1,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     descriptionSection: {
-        flex: 7
+        flex: 6
     },
     desc: {
         textAlign: "justify"

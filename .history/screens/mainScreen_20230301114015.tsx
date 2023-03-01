@@ -8,7 +8,7 @@ import RecruiterTemplate from "../components/recruiterTemplate";
 import TalentTemplate from "../components/talentTemplate";
 import { fakeDataCompanies } from "../utils/fakeDataCompanies";
 import StandardButton from "../components/standardButton";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 import { DecodedToken } from "../utils/types";
 
 // type DecodedToken = {
@@ -46,10 +46,8 @@ const MainScreen = () => {
     }, [])
 
 
-    const skip = (): void => {
-        console.log("index", index)
-        console.log("fakedatalenght", fakeDataCompanies.length)
-        if (fakeDataCompanies.length - 1 === index) {
+    const passer = (): void => {
+        if(fakeDataCompanies.length === index) {
             setIndex(0);
             return
         }
@@ -59,18 +57,14 @@ const MainScreen = () => {
     // TODO On doit faire appel a un useState qu'on doit faire varier quand on appuiera sur un bouton dans un premier temps
     if (isTalent) {
         return (
-            // <View style={styles.test}>
-                <RecruiterTemplate
-                    name={fakeDataCompanies[index].companyName}
-                    fonction={fakeDataCompanies[index].poste}
-                    desc={fakeDataCompanies[index].description}
-                    mission={fakeDataCompanies[index].mission}
-                    profil={fakeDataCompanies[index].profil}
-                    salary={fakeDataCompanies[index].salary}
-                    contract={fakeDataCompanies[index].contract}
+            <View>
+                <RecruiterTemplate 
+                name={fakeDataCompanies[index].companyName} 
+                fonction={fakeDataCompanies[index].poste} 
+                desc={fakeDataCompanies[index].description} 
                 />
-                // </View>
-                // {/* <StandardButton title={"Passer"} onPress={skip} /> */}
+                <StandardButton title={"Passer"} onPress={passer}/>
+            </View>
         )
     }
 
@@ -78,11 +72,5 @@ const MainScreen = () => {
         <TalentTemplate />
     )
 };
-
-const styles = StyleSheet.create({
-    test: {
-        flex: 1
-    }
-})
 
 export default MainScreen;

@@ -29,7 +29,7 @@ const LoadingScreen = () => {
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
         >
-            <Image source={require("../assets/logo.png")} style={styles.logo} />
+            <Image source={require("../assets/logo.png")} style={styles.logo}/>
             <Text style={styles.text}>JOBBER</Text>
         </LinearGradient>
     )
@@ -42,15 +42,15 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     logo: {
-        width: "40%",
-        height: "20%",
-        resizeMode: "contain",
+        width : "40%",
+        height : "20%",
+        resizeMode : "contain",
     },
     text: {
-        fontSize: 20,
-        fontWeight: "bold",
-        paddingTop: 15,
-        color: "white"
+        fontSize : 20,
+        fontWeight : "bold",
+        paddingTop : 15,
+        color : "white"
     }
 })
 
